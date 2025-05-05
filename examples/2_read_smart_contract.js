@@ -1,6 +1,6 @@
 const { ethers } = require("ethers");
 
-const INFURA_ID = ''
+const INFURA_ID = 'e7d8fbaa1257430fafc117c84e2a5db3'
 const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_ID}`)
 
 const ERC20_ABI = [
@@ -9,6 +9,7 @@ const ERC20_ABI = [
     "function totalSupply() view returns (uint256)",
     "function balanceOf(address) view returns (uint)",
 ];
+
 
 const address = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // DAI Contract
 const contract = new ethers.Contract(address, ERC20_ABI, provider)
